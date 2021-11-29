@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.10-management-alpine
+    hostname: rabbitmq-test
+    ports:
+      - 5672:5672
+      - 9000:15672
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq
